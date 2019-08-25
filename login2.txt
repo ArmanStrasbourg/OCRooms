@@ -1,0 +1,49 @@
+Dépot local 
+Dépot distant
+***************************
+3 zones locales majeurs: 
+- le répertoire de travail (working directory / WD)
+- l'index, ou stage 
+- le dépôt local (Git directory / repository)
+WD --> /via Git Add/ --> Stage 
+                              --> /via Git Commit/ --> Repository
+             | --> /via Git Push/ --> | 
+Repository   | <-- /via Git Pull/ <-- | GitHub
+
+
+Initialiser le dépot :
+git init
+
+git remote add OC https://https://github.com/OpenClassrooms-Student-Center/ProjetOpenSource.git
+
+git clone https://github.com/OpenClassrooms-Student-Center/ProjetOpenSource.git
+
+**********************************
+	create file in the directory OCRooms 
+git add SecondFichier.txt	-- Ajoutez-le avec la commande
+git commit 
+**********************************
+git branch 		-- Visu des branche
+git branch cagnotte 	-- Création la branche cagnotte
+git branch -d cagnotte	-- Suppression de la branche cagnotte
+ git branch -D cagnotte -- forçage de suppression
+git checkout cagnotte	-- Basqule vers la branche cagnotte
+**********************************
+git status
+git stash
+git stash list
+git stash apply stash@{XXX}
+**********************************
+git commit -m "Réalisation de la partie cagnotte coté front end"
+
+La commande Git push permet d'envoyer les modifications que l'on a réalisées en local sur le dépôt à distance, alors que la commande Git pull permet de récupérer en local le projet distant
+
+git push 
+**********************************
+git reflog -- Visu l'historique de nos actions  
+git log	-- Visu détail du commit // le has
+  commit 3f178257d53be62b3b974ca56b0059cb63f90c9b (cagnotte)
+  commit ae131f06777fa3aefcfd9c5426579fa7b617afd1 (origin/master, origin/HEAD, master) Create login.css
+
+git reset --hard HEAD^
+
